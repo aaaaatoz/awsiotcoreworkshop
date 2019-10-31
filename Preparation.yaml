@@ -19,7 +19,7 @@ Resources:
       Name: 'IoTWorkshop-Door'
       InstanceType: 't2.micro'
       # if you default VPC in us-east-1 has public and private subnets, you must specify the public subnet here
-      # SubnetId: 'subnet-a8cb40a4'
+      SubnetId: 'subnet-a8cb40a4'
   UserPool:
     Type: "AWS::Cognito::UserPool"
     Properties:

@@ -1,0 +1,8 @@
+{
+    "rootCA": "/Users/rafaxu/certs/legacyca.pem",
+    "privateCert": "/Users/rafaxu/certs/certificate.pem.crt",
+    "certificateKey": "/Users/rafaxu/certs/private.pem.key",
+    "endpoint": "a2a4ziueyywvoe.iot.us-east-1.amazonaws.com",
+    "port": 8883,
+    "thingName": "Door"
+}
