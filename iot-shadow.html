@@ -139,12 +139,12 @@
 	function initCognitoSDK() {
 	        AWS.config.region = 'us-east-1'; // like: us-east-1
 	        var authData = {
-	            ClientId: '******', // Your client id here
-	            AppWebDomain: '******.auth.us-east-1.amazoncognito.com',
+	            ClientId: '[replaceme]', // Your client id here
+	            AppWebDomain: '[replaceme].auth.us-east-1.amazoncognito.com',
 	            TokenScopesArray: ['email', 'openid'], // e.g.['phone', 'email', 'profile','openid', 'aws.cognito.signin.user.admin'],
-	            RedirectUriSignIn: 'https://*******.cloudfront.net/iot-shadow.html',
-	            RedirectUriSignOut: 'https://******.cloudfront.net/iot-shadow.html',
-	            UserPoolId: 'us-east-1_******', // Your user pool id here
+	            RedirectUriSignIn: 'https://[replaceme].cloudfront.net/iot-shadow.html',
+	            RedirectUriSignOut: 'https://[replaceme].cloudfront.net/iot-shadow.html',
+	            UserPoolId: 'us-east-1_[replaceme]', // Your user pool id here
 	        };
 	        var login = {};
 	        var auth = new AmazonCognitoIdentity.CognitoAuth(authData);
@@ -155,7 +155,7 @@
 	                var loginKey = 'cognito-idp.' + AWS.config.region + '.amazonaws.com/' + authData['UserPoolId'];
 	                login[loginKey] = result.getIdToken().getJwtToken();
 	                AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-	                    IdentityPoolId: 'us-east-1:*****',
+	                    IdentityPoolId: 'us-east-1:[replaceme]',
 	                    Logins: login
 	                });
 	                AWS.config.credentials.refresh((error) => {
